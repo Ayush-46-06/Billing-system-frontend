@@ -155,6 +155,17 @@ const Sidebar = ({ closeSidebar }) => {
         </nav>
       </div>
 
+      {/* BOTTOM */}
+      <div className="mt-8 border-t border-gray-100 pt-4">
+        <button
+          onClick={handleLogout}
+          className="flex items-center gap-2 px-4 py-2 w-full text-left rounded-full hover:bg-red-50 text-red-600 font-medium transition-colors"
+        >
+          <LogOut size={18} />
+          Logout
+        </button>
+      </div>
+
     </div>
   );
 };
