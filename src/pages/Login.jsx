@@ -1,8 +1,8 @@
 import React, { useState } from "react"; 
 import api from "../api/axios";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, ArrowLeft } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import workspaceImg from "../assets/Workspace.svg";
 import logo from "../assets/color.png";
@@ -116,7 +116,11 @@ const Login = () => {
         }
       `}</style>
 
-      <div className="min-h-screen flex page-bg overflow-hidden items-center justify-center p-4">
+      <div className="min-h-screen flex page-bg overflow-hidden items-center justify-center p-4 relative">
+        <Link to="/" className="absolute top-6 left-6 md:top-10 md:left-10 flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors font-semibold bg-white/50 backdrop-blur-md px-4 py-2 rounded-full shadow-sm border border-slate-200 hover:shadow-md z-50">
+          <ArrowLeft size={18} /> Back to Home
+        </Link>
+        
         <div className="flex w-full max-w-6xl items-center justify-between gap-12">
           
           <div className="hidden lg:flex w-1/2 flex-col justify-center px-6">
