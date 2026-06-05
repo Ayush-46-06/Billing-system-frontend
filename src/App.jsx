@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
+import Landing from "./pages/Landing";
+import LegalPrivacy from "./pages/LegalPrivacy";
+import TermsOfService from "./pages/TermsOfService";
 import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import CreateInvoice from "./pages/CreateInvoice";
@@ -31,7 +34,10 @@ function App() {
      <ScrollToTop />
       <Routes>
         
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/privacy-policy" element={<LegalPrivacy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         
