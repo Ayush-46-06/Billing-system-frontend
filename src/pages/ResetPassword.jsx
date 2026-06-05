@@ -51,7 +51,7 @@ const ResetPassword = () => {
       });
 
       const res = await axios.post(
-        `http://localhost:8080/api/auth/reset-password?token=${token}&newPassword=${newPassword}`
+        `https://billing-system-backend-xd6e.onrender.com/api/auth/reset-password?token=${token}&newPassword=${newPassword}`
       );
 
       console.log(res.data);

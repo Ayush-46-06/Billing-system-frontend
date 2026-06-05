@@ -28,7 +28,7 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const res = await axios.get("http://localhost:8080/api/user/me", {
+      const res = await axios.get("https://billing-system-backend-xd6e.onrender.com/api/user/me", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -53,7 +53,7 @@ const Profile = () => {
     formData.append("file", file);
 
     const res = await axios.post(
-      "http://localhost:8080/api/user/upload-profile",
+      "https://billing-system-backend-xd6e.onrender.com/api/user/upload-profile",
       formData,
       {
         headers: {
@@ -83,7 +83,7 @@ const Profile = () => {
 
     try {
       await axios.post(
-        `http://localhost:8080/api/auth/forgot-password?email=${forgotEmail}`
+        `https://billing-system-backend-xd6e.onrender.com/api/auth/forgot-password?email=${forgotEmail}`
       );
 
       Swal.fire({
@@ -111,7 +111,7 @@ const Profile = () => {
       setSaving(true);
 
       const res = await axios.put(
-        "http://localhost:8080/api/user/update",
+        "https://billing-system-backend-xd6e.onrender.com/api/user/update",
         {
           name: name,
           department: department
